@@ -18,7 +18,7 @@ fetch('http://localhost:5000/post', {
 .then(data => {
   console.log('Server response:', data);
   if (parseInt(data) == 1 ) {
-	alert('⚠️ WARNING ⚠️: Suspicious');
+	//alert('⚠️ WARNING ⚠️: Suspicious');
 	console.log('1');
 	  el.textContent = 'Suspicious';
 	  el2.textContent = '⚠️ WARNING ⚠️:This site has been flagged as suspicious. Proceed with EXTREME caution!';
@@ -29,7 +29,7 @@ fetch('http://localhost:5000/post', {
 
 	
   } else if (parseInt(data) == 0 ) {
-	alert('Safe');
+	//alert('Safe');
 	console.log('0');
 	el.textContent = 'Safe';
 	el2.textContent = '✅ This website is safe to use';
@@ -37,7 +37,7 @@ fetch('http://localhost:5000/post', {
 	el.style.transform = "translateZ(25px)";
 	
   } else if (parseInt(data) == -1 ) {
-	alert('⚠️ WARNING ⚠️: Phishing');
+	//alert('⚠️ WARNING ⚠️: Phishing');
 	console.log('-1');
 	el.textContent = 'Phishing'
 	el2.textContent = '⚠️ WARNING ⚠️: This site has been identified as a phishing site. Do not proceed further!';

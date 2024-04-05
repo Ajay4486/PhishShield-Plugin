@@ -144,6 +144,7 @@ def domainAge(url):
     whois_res = whois.whois(url)
     if datetime.datetime.now() > whois_res["creation_date"][0] + relativedelta(months=+6):
       return 0
+      
     else:
       return 1
   except:
